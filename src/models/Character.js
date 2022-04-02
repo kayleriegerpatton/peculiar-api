@@ -1,5 +1,7 @@
 const { Schema, model } = require("mongoose");
 
+const book = require("./Book");
+
 const characterSchema = {
   name: {
     type: String,
@@ -23,7 +25,8 @@ const characterSchema = {
 
   imageUrl: {
     type: String,
-    // default: ''
+    default:
+      "https://www.ransomriggs.com/wp-content/uploads/2018/02/book_cover_img1.jpg",
   },
 
   homeLoop: {
@@ -32,13 +35,8 @@ const characterSchema = {
     ref: "Loop",
   },
 
-  books: [
-    {
-      type: Schema.Types.ObjectId,
-      ref: "Book",
-      required: true,
-    },
-  ],
+  //   array of book schemas
+  books: [book],
 };
 
 const schema = new Schema(characterSchema, {
