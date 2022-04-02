@@ -22,6 +22,8 @@ const bookSchema = {
   },
 };
 
-const schema = new Schema(bookSchema);
+const schema = new Schema(bookSchema, {
+  id: true,
+});
 
 module.exports = schema;
