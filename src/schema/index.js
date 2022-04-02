@@ -36,6 +36,9 @@ const typeDefs = gql`
   }
 
   # QUERIES
+  type Query {
+    characters: [Character]
+  }
 `;
 
 module.exports = typeDefs;
