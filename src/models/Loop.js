@@ -23,7 +23,7 @@ const loopSchema = {
   },
 };
 
-const schema = new Schema(loopSchema);
+const schema = new Schema(loopSchema, { id: true });
 
 const Loop = model("Loop", schema);
 
