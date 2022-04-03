@@ -1,5 +1,6 @@
 const { Schema, model } = require("mongoose");
 
+// TODO: Future additions?: ISBN, pages, summary
 const bookSchema = {
   title: {
     type: String,
