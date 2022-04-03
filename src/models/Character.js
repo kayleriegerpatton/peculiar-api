@@ -1,6 +1,6 @@
 const { Schema, model } = require("mongoose");
 
-// TODO: Add quotes?
+// TODO: Future additions?: quotes, movie
 const characterSchema = {
   name: {
     type: String,
