@@ -1,4 +1,4 @@
-const { Schema } = require("mongoose");
+const { Schema, model } = require("mongoose");
 
 // Subdocument schema used as schema for Character model's books array
 const bookSchema = {
@@ -26,4 +26,6 @@ const schema = new Schema(bookSchema, {
   id: true,
 });
 
-module.exports = schema;
+const Book = model("Book", schema);
+
+module.exports = Book;

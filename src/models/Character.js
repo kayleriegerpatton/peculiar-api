@@ -36,7 +36,12 @@ const characterSchema = {
   },
 
   //   array of book schemas
-  books: [book],
+  books: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "Book",
+    },
+  ],
 };
 
 const schema = new Schema(characterSchema, {
