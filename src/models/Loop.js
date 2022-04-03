@@ -1,15 +1,47 @@
 const { Schema, model } = require("mongoose");
 
 const loopSchema = {
-  location: {
-    //   allow for wide range of location formats
+  city: {
     type: String,
-    required: true,
+    default: "Unknown",
   },
 
-  date: {
-    //   allow for wide range of date formats
+  country: {
     type: String,
+    required: true,
+    default: "Unknown",
+  },
+
+  day: {
+    //   3
+    type: Number,
+    default: "Unknown",
+  },
+
+  month: {
+    //   September
+    type: String,
+    enum: [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December",
+    ],
+    default: "Unknown",
+  },
+
+  year: {
+    //  500 B.C.E, 1940 C.E.
+    type: String,
+    default: "Unknown",
   },
 
   ymbryne: {

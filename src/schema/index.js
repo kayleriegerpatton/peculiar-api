@@ -5,8 +5,11 @@ const typeDefs = gql`
 
   type Loop {
     id: ID!
-    location: String!
-    date: String
+    city: String
+    country: String!
+    day: Int
+    month: String
+    year: String
     description: String
     ymbryne: Character
   }
