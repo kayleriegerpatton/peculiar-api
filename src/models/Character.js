@@ -1,7 +1,6 @@
 const { Schema, model } = require("mongoose");
 
-const book = require("./Book");
-
+// TODO: Add quotes?
 const characterSchema = {
   name: {
     type: String,
@@ -9,6 +8,7 @@ const characterSchema = {
     unique: true,
   },
 
+  // TODO: how to handle a change in species type? ie 'Peculiar(formerly)'
   species: [
     {
       type: String,

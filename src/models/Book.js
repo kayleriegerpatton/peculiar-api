@@ -1,6 +1,5 @@
 const { Schema, model } = require("mongoose");
 
-// Subdocument schema used as schema for Character model's books array
 const bookSchema = {
   title: {
     type: String,
