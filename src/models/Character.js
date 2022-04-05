@@ -1,5 +1,7 @@
 const { Schema, model } = require("mongoose");
 
+const peculiaritySchema = require("./Peculiarity");
+
 // TODO: Future additions?: quotes, movie
 const characterSchema = {
   name: {
@@ -13,15 +15,17 @@ const characterSchema = {
     {
       type: String,
       required: true,
-      enum: ["Peculiar/Syndrigast", "Wight", "Hollowgast"],
+      enum: ["Peculiar", "Wight", "Hollowgast"],
     },
   ],
 
-  peculiarity: {
-    //   reference Peculiarity model
-    type: Schema.Types.ObjectId,
-    ref: "Peculiarity",
-  },
+  // peculiarity: {
+  //   //   reference Peculiarity model
+  //   type: Schema.Types.ObjectId,
+  //   ref: "Peculiarity",
+  // },
+
+  peculiarity: peculiaritySchema,
 
   imageUrl: {
     type: String,

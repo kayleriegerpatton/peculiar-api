@@ -4,7 +4,6 @@ const peculiaritySchema = {
   name: {
     type: String,
     required: true,
-    unique: true,
   },
 
   abilities: [
@@ -13,17 +12,17 @@ const peculiaritySchema = {
     },
   ],
 
-  knownPeculiars: {
-    //   reference Character model
-    type: Schema.Types.ObjectId,
-    ref: "Character",
-  },
+  // knownPeculiars: {
+  //   //   reference Character model
+  //   type: Schema.Types.ObjectId,
+  //   ref: "Character",
+  // },
 };
 
 const schema = new Schema(peculiaritySchema, {
   id: true,
 });
 
-const Peculiarity = model("Peculiarity", schema);
+// const Peculiarity = model("Peculiarity", schema);
 
-module.exports = Peculiarity;
+module.exports = schema;

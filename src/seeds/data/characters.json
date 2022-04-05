@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Emma Bloom",
+    "species": ["Peculiar"],
+    "peculiarity": {
+      "name": "Pyrokinesis",
+      "abilities": ["Creates and controls fire"]
+    }
+  },
+  {
+    "name": "Jacob Portman",
+    "species": ["Peculiar"],
+    "peculiarity": {
+      "name": "Librarian",
+      "abilities": [
+        "Sees hollowgasts",
+        "Controls hollowgasts",
+        "Senses the proximity of hollowgasts"
+      ]
+    }
+  },
+  {
+    "name": "Enoch O'Connor",
+    "species": ["Peculiar"],
+    "peculiarity": {
+      "name": "Deadraiser",
+      "abilities": ["Reanimates corpses"]
+    }
+  }
+]
