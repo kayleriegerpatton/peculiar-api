@@ -26,5 +26,81 @@
       "name": "Deadraiser",
       "abilities": ["Reanimates corpses"]
     }
+  },
+  {
+    "name": "Alma LeFay Peregrine",
+    "species": ["Peculiar"],
+    "peculiarity": {
+      "name": "Ymbryne",
+      "abilities": [
+        "Manipulates time",
+        "Shapeshifts into bird",
+        "Manipulates memories"
+      ]
+    }
+  },
+  {
+    "name": "Hugh Apiston",
+    "species": ["Peculiar"],
+    "peculiarity": {
+      "name": "Bee Manipulator",
+      "abilities": ["Manipulates bees", "Hosts bees in his body"]
+    }
+  },
+  {
+    "name": "Horace Somnusson",
+    "species": ["Peculiar"],
+    "peculiarity": {
+      "name": "Prophet",
+      "abilities": ["Has precognitive/prophetic dreams"]
+    }
+  },
+  {
+    "name": "Bronwyn Bruntley",
+    "species": ["Peculiar"],
+    "peculiarity": {
+      "name": "Superstrength",
+      "abilities": []
+    }
+  },
+  {
+    "name": "Victor Bruntley",
+    "species": ["Peculiar"],
+    "peculiarity": {
+      "name": "Deadraiser",
+      "abilities": ["Reanimates corpses"]
+    }
+  },
+  {
+    "name": "Olive Abroholos Elephanta",
+    "species": ["Peculiar"],
+    "peculiarity": {
+      "name": "Levitation",
+      "abilities": []
+    }
+  },
+  {
+    "name": "Claire Densmore",
+    "species": ["Peculiar"],
+    "peculiarity": {
+      "name": "Backmouth",
+      "abilities": []
+    }
+  },
+  {
+    "name": "Fiona Frauenfeld",
+    "species": ["Peculiar"],
+    "peculiarity": {
+      "name": "Seedsprout",
+      "abilities": ["Manipulates plants"]
+    }
+  },
+  {
+    "name": "Millard Nullings",
+    "species": ["Peculiar"],
+    "peculiarity": {
+      "name": "Invisibility",
+      "abilities": []
+    }
   }
 ]
