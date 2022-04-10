@@ -5,7 +5,8 @@
     "peculiarity": {
       "name": "Pyrokinesis",
       "abilities": ["Creates and controls fire"]
-    }
+    },
+    "imageUrl": "https://static.wikia.nocookie.net/thepeculiarchildren/images/1/15/Emma_Bloom.png/revision/latest/scale-to-width-down/215?cb=20121130004645"
   },
   {
     "name": "Jacob Portman",
@@ -17,7 +18,8 @@
         "Controls hollowgasts",
         "Senses the proximity of hollowgasts"
       ]
-    }
+    },
+    "imageUrl": "https://static.wikia.nocookie.net/thepeculiarchildren/images/e/e7/Our_hero.png/revision/latest/scale-to-width-down/277?cb=20140216194807"
   },
   {
     "name": "Enoch O'Connor",
@@ -25,7 +27,8 @@
     "peculiarity": {
       "name": "Deadraiser",
       "abilities": ["Reanimates corpses"]
-    }
+    },
+    "imageUrl": "https://static.wikia.nocookie.net/thepeculiarchildren/images/3/36/Enc.jpg/revision/latest/scale-to-width-down/246?cb=20130224032808"
   },
   {
     "name": "Alma LeFay Peregrine",
@@ -37,7 +40,8 @@
         "Shapeshifts into bird",
         "Manipulates memories"
       ]
-    }
+    },
+    "imageUrl": "https://static.wikia.nocookie.net/thepeculiarchildren/images/c/c2/AlmaPeregrine.jpg/revision/latest/scale-to-width-down/736?cb=20180115002142"
   },
   {
     "name": "Hugh Apiston",
@@ -45,7 +49,8 @@
     "peculiarity": {
       "name": "Bee Manipulator",
       "abilities": ["Manipulates bees", "Hosts bees in his body"]
-    }
+    },
+    "imageUrl": "https://static.wikia.nocookie.net/thepeculiarchildren/images/b/b3/Hugh.jpg/revision/latest/scale-to-width-down/525?cb=20130224224153"
   },
   {
     "name": "Horace Somnusson",
@@ -53,7 +58,8 @@
     "peculiarity": {
       "name": "Prophet",
       "abilities": ["Has precognitive/prophetic dreams"]
-    }
+    },
+    "imageUrl": "https://static.wikia.nocookie.net/thepeculiarchildren/images/5/56/Follower.jpg/revision/latest/scale-to-width-down/179?cb=20130222020233"
   },
   {
     "name": "Bronwyn Bruntley",
@@ -61,7 +67,8 @@
     "peculiarity": {
       "name": "Superstrength",
       "abilities": []
-    }
+    },
+    "imageUrl": "https://static.wikia.nocookie.net/thepeculiarchildren/images/6/64/Bronwyn.jpg/revision/latest/scale-to-width-down/525?cb=20130222024955"
   },
   {
     "name": "Victor Bruntley",
@@ -69,7 +76,8 @@
     "peculiarity": {
       "name": "Deadraiser",
       "abilities": ["Reanimates corpses"]
-    }
+    },
+    "imageUrl": "https://static.wikia.nocookie.net/thepeculiarchildren/images/1/1e/Strongboy.png/revision/latest/scale-to-width-down/233?cb=20130224010238"
   },
   {
     "name": "Olive Abroholos Elephanta",
@@ -77,7 +85,8 @@
     "peculiarity": {
       "name": "Levitation",
       "abilities": []
-    }
+    },
+    "imageUrl": "https://static.wikia.nocookie.net/thepeculiarchildren/images/1/17/The_Levitating_Girl_-_Yefim_Tovbis.png/revision/latest/scale-to-width-down/520?cb=20160420021010"
   },
   {
     "name": "Claire Densmore",
@@ -85,7 +94,8 @@
     "peculiarity": {
       "name": "Backmouth",
       "abilities": []
-    }
+    },
+    "imageUrl": "https://static.wikia.nocookie.net/thepeculiarchildren/images/7/7d/Claire.jpg/revision/latest/scale-to-width-down/1000?cb=20210331002615"
   },
   {
     "name": "Fiona Frauenfeld",
@@ -93,7 +103,8 @@
     "peculiarity": {
       "name": "Seedsprout",
       "abilities": ["Manipulates plants"]
-    }
+    },
+    "imageUrl": "https://static.wikia.nocookie.net/thepeculiarchildren/images/2/22/Fiona.jpg/revision/latest/scale-to-width-down/525?cb=20130222030801"
   },
   {
     "name": "Millard Nullings",
@@ -101,6 +112,7 @@
     "peculiarity": {
       "name": "Invisibility",
       "abilities": []
-    }
+    },
+    "imageUrl": "https://static.wikia.nocookie.net/thepeculiarchildren/images/e/e0/The_Invisible_Boy_-_Robert_Jackson.png/revision/latest/scale-to-width-down/520?cb=20160420020645"
   }
 ]
