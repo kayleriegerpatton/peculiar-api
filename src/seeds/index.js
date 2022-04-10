@@ -33,18 +33,33 @@ const seed = async () => {
     await Loop.insertMany(loops);
     console.log("[INFO]: Loops seeded successfully.");
 
-    // get loop
+    // get loop & books
     const seededLoop = await Loop.find({});
+    const seededBooks = await Book.find({});
+    console.log(seededBooks);
 
     // iterate through characters, add the loop id to homeLoop path
+    //* add books references here as well?
     const charactersToSeed = characters.map((character) => {
+      // if Fiona, don't add #6
+      if (character.name === "Fiona Frauenfeld") {
+        return { ...character, homeLoop: seededLoop[0]._id };
+      }
+      // if victor, only add #1
+      if (character.name === "Victor Bruntley") {
+        return { ...character, homeLoop: seededLoop[0]._id };
+      }
+
+      // else add all 7 books
       return {
         ...character,
         homeLoop: seededLoop[0]._id,
+        books: seededBooks.map((book) => {
+          return book._id;
+        }),
       };
     });
 
-    //* seeding without Books references
     const characterPromises = charactersToSeed.map((character) => {
       return Character.create(character);
     });
