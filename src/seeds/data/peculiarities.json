@@ -1,18 +1,1 @@
-[
-  {
-    "name": "Librarian",
-    "abilities": [
-      "Sees hollowgasts",
-      "Controls hollowgasts",
-      "Senses the proximity of hollowgasts"
-    ]
-  },
-  {
-    "name": "Pyrokinesis",
-    "abilities": ["Creates and controls fire"]
-  },
-  {
-    "name": "Deadraiser",
-    "abilities": ["Reanimates corpses"]
-  }
-]
+

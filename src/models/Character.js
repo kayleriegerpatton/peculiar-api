@@ -39,7 +39,6 @@ const characterSchema = {
     ref: "Loop",
   },
 
-  //   array of book schemas
   books: [
     {
       type: Schema.Types.ObjectId,

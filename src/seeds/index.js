@@ -1,7 +1,7 @@
 require("dotenv").config();
 const mongoose = require("mongoose");
 
-const { Character, Loop, Peculiarity, Book } = require("../models");
+const { Character, Loop, Book } = require("../models");
 
 // import data files
 const books = require("./data/books.json");
@@ -19,21 +19,37 @@ const seed = async () => {
       }
     );
 
-    console.log("[INFO]: Database connection successful.");
+    console.log("[INFO]: Database connected successfully.");
 
     await Character.deleteMany({});
     await Loop.deleteMany({});
-    // await Peculiarity.deleteMany({});
     await Book.deleteMany({});
 
     await Book.insertMany(books);
     console.log("[INFO]: Books seeded successfully.");
 
-    // currently seeding without ymbryne Character reference
+    //* currently seeding without ymbryne Character reference; TODO: after seeding characters, get ymbryne character, update loop record with character id
+
     await Loop.insertMany(loops);
     console.log("[INFO]: Loops seeded successfully.");
 
-    await Character.insertMany(characters);
+    // get loop
+    const seededLoop = await Loop.find({});
+
+    // iterate through characters, add the loop id to homeLoop path
+    const charactersToSeed = characters.map((character) => {
+      return {
+        ...character,
+        homeLoop: seededLoop[0]._id,
+      };
+    });
+
+    //* seeding without Books references
+    const characterPromises = charactersToSeed.map((character) => {
+      return Character.create(character);
+    });
+
+    await Promise.all(characterPromises);
     console.log("[INFO]: Characters seeded successfully.");
   } catch (error) {
     console.log(`[ERROR]: Database connection failed | ${error.message}`);
