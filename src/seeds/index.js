@@ -47,7 +47,11 @@ const seed = async () => {
       }
       // if victor, only add #1
       if (character.name === "Victor Bruntley") {
-        return { ...character, homeLoop: seededLoop[0]._id };
+        return {
+          ...character,
+          homeLoop: seededLoop[0]._id,
+          books: seededBooks[0]._id,
+        };
       }
 
       // else add all 7 books
