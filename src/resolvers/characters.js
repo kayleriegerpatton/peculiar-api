@@ -6,6 +6,7 @@ const getCharacters = async () => {
   try {
     const characters = await Character.find({})
       .populate("peculiarity")
+      .populate("homeLoop")
       .populate("books");
 
     return characters;
