@@ -22,6 +22,11 @@ const typeDefs = gql`
     bookNumber: Int
   }
 
+  type Peculiarity {
+    name: String!
+    abilities: [String]
+  }
+
   type Character {
     id: ID!
     name: String!
@@ -30,12 +35,6 @@ const typeDefs = gql`
     imageUrl: String
     homeLoop: Loop
     books: [Book]
-  }
-
-  type Peculiarity {
-    name: String!
-    abilities: [String]
-    knownPeculiars: Character
   }
 
   # QUERIES

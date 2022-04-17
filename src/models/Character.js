@@ -23,8 +23,6 @@ const characterSchema = {
     ref: "Peculiarity",
   },
 
-  // peculiarity: peculiaritySchema,
-
   imageUrl: {
     type: String,
     default:
