@@ -40,14 +40,21 @@ const seed = async () => {
     // get loop, books, peculiarities
     const seededLoop = await Loop.find({});
     const seededBooks = await Book.find({});
-    console.log(seededBooks);
     const seededPeculiarities = await Peculiarity.find({});
 
-    console.log(seededPeculiarities);
+    const peculiarityByCharacter = {
+      EmmaBloom: seededPeculiarities[0]._id,
+      JacobPortman: seededPeculiarities[1]._id,
+      EnochOConnor: seededPeculiarities[2]._id,
+    };
 
-    // iterate through characters, add the loop id to homeLoop path, books reference, and peculiarities reference
+    // lookup to match peculiarity based on character name
+    const getCharacterPeculiarity = (character) =>
+      peculiarityByCharacter[character.replace(/[^a-z]/gi, "")];
+
+    // iterate through characters, add loop id to homeLoop path, books reference, and peculiarities reference
     const charactersToSeed = characters.map((character) => {
-      // if Fiona, don't add #6
+      // if Fiona, don't add book #6
       if (character.name === "Fiona Frauenfeld") {
         return {
           ...character,
@@ -70,6 +77,7 @@ const seed = async () => {
       // else add all 7 books
       return {
         ...character,
+        peculiarity: getCharacterPeculiarity(character.name),
         homeLoop: seededLoop[0]._id,
         books: seededBooks.map((book) => {
           return book._id;
