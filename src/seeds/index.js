@@ -41,7 +41,7 @@ const seed = async () => {
     const seededBooks = await Book.find({});
     const seededPeculiarities = await Peculiarity.find({});
 
-    // lookup to match peculiarity based on character name
+    // lookup table = character name: peculiarity id
     const peculiarityByCharacter = {
       EmmaBloom: seededPeculiarities[0]._id,
       JacobPortman: seededPeculiarities[1]._id,
@@ -56,9 +56,10 @@ const seed = async () => {
     };
 
     const getCharacterPeculiarity = (character) =>
+      // remove non-alpha characters from names
       peculiarityByCharacter[character.replace(/[^a-z]/gi, "")];
 
-    // iterate through characters, add loop id to homeLoop path, books references, and peculiarities reference
+    // iterate through characters, add loop id, books, and peculiarity refs
     const charactersToSeed = characters.map((character) => {
       // if Fiona, don't add book #6
       if (character.name === "Fiona Frauenfeld") {
@@ -99,7 +100,6 @@ const seed = async () => {
     await Promise.all(characterPromises);
     console.log("[INFO]: Characters seeded successfully.");
 
-    //TODO: after seeding characters, get ymbryne character, update loop record with the character id
     // get ymbryne character id
     const ymbryne = await Character.aggregate([
       {
@@ -115,9 +115,11 @@ const seed = async () => {
       { $match: { "peculiarity_name.name": "Ymbryne" } },
     ]);
 
-    console.log(ymbryne[0]._id);
-
-    // update loop record with ymbryne path
+    // add ymbryne id ref to loop record
+    await Loop.findOneAndUpdate(
+      { city: "Cairnholm" },
+      { $set: { ymbryne: ymbryne[0]._id } }
+    );
   } catch (error) {
     console.log(`[ERROR]: Database connection failed | ${error.message}`);
   }
