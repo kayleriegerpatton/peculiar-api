@@ -43,8 +43,13 @@ const seed = async () => {
     const charactersToSeed = characters.map((character) => {
       // if Fiona, don't add #6
       if (character.name === "Fiona Frauenfeld") {
-        return { ...character, homeLoop: seededLoop[0]._id };
+        return {
+          ...character,
+          homeLoop: seededLoop[0]._id,
+          books: seededBooks.splice(5, 1),
+        };
       }
+
       // if victor, only add #1
       if (character.name === "Victor Bruntley") {
         return {
