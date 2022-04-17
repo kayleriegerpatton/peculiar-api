@@ -33,7 +33,6 @@ const seed = async () => {
     await Peculiarity.insertMany(peculiarities);
     console.log("[INFO]: Peculiarities seeded successfully.");
 
-    //* currently seeding LOOPS without ymbryne Character reference; TODO: after seeding characters, get ymbryne character, update loop record with the character id
     await Loop.insertMany(loops);
     console.log("[INFO]: Loops seeded successfully.");
 
@@ -99,6 +98,26 @@ const seed = async () => {
 
     await Promise.all(characterPromises);
     console.log("[INFO]: Characters seeded successfully.");
+
+    //TODO: after seeding characters, get ymbryne character, update loop record with the character id
+    // get ymbryne character id
+    const ymbryne = await Character.aggregate([
+      {
+        // join peculiarity data to character data
+        $lookup: {
+          from: "peculiarities",
+          localField: "peculiarity",
+          foreignField: "_id",
+          as: "peculiarity_name",
+        },
+      },
+      { $unwind: { path: "$peculiarity_name" } },
+      { $match: { "peculiarity_name.name": "Ymbryne" } },
+    ]);
+
+    console.log(ymbryne[0]._id);
+
+    // update loop record with ymbryne path
   } catch (error) {
     console.log(`[ERROR]: Database connection failed | ${error.message}`);
   }
