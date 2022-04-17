@@ -11,18 +11,12 @@ const peculiaritySchema = {
       type: String,
     },
   ],
-
-  // knownPeculiars: {
-  //   //   reference Character model
-  //   type: Schema.Types.ObjectId,
-  //   ref: "Character",
-  // },
 };
 
 const schema = new Schema(peculiaritySchema, {
   id: true,
 });
 
-// const Peculiarity = model("Peculiarity", schema);
+const Peculiarity = model("Peculiarity", schema);
 
-module.exports = schema;
+module.exports = Peculiarity;

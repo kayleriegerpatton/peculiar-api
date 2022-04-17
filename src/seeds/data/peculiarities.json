@@ -1,1 +1,54 @@
-
+[
+  {
+    "name": "Pyrokinesis",
+    "abilities": ["Creates and controls fire"]
+  },
+  {
+    "name": "Librarian",
+    "abilities": [
+      "Sees hollowgasts",
+      "Controls hollowgasts",
+      "Senses the proximity of hollowgasts"
+    ]
+  },
+  {
+    "name": "Deadraiser",
+    "abilities": ["Reanimates corpses"]
+  },
+  {
+    "name": "Ymbryne",
+    "abilities": [
+      "Manipulates time",
+      "Shapeshifts into bird",
+      "Manipulates memories"
+    ]
+  },
+  {
+    "name": "Bee Manipulator",
+    "abilities": ["Manipulates bees", "Hosts bees in their body"]
+  },
+  {
+    "name": "Prophet",
+    "abilities": ["Has precognitive/prophetic dreams"]
+  },
+  {
+    "name": "Superstrength",
+    "abilities": []
+  },
+  {
+    "name": "Levitation",
+    "abilities": []
+  },
+  {
+    "name": "Backmouth",
+    "abilities": []
+  },
+  {
+    "name": "Seedsprout",
+    "abilities": ["Manipulates plants"]
+  },
+  {
+    "name": "Invisibility",
+    "abilities": []
+  }
+]

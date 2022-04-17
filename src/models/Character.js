@@ -1,7 +1,5 @@
 const { Schema, model } = require("mongoose");
 
-const peculiaritySchema = require("./Peculiarity");
-
 // TODO: Future additions?: quotes, movie
 const characterSchema = {
   name: {
@@ -19,13 +17,13 @@ const characterSchema = {
     },
   ],
 
-  // peculiarity: {
-  //   //   reference Peculiarity model
-  //   type: Schema.Types.ObjectId,
-  //   ref: "Peculiarity",
-  // },
+  peculiarity: {
+    //   reference Peculiarity model
+    type: Schema.Types.ObjectId,
+    ref: "Peculiarity",
+  },
 
-  peculiarity: peculiaritySchema,
+  // peculiarity: peculiaritySchema,
 
   imageUrl: {
     type: String,

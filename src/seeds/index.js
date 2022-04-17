@@ -38,8 +38,7 @@ const seed = async () => {
     const seededBooks = await Book.find({});
     console.log(seededBooks);
 
-    // iterate through characters, add the loop id to homeLoop path
-    //* add books references here as well?
+    // iterate through characters, add the loop id to homeLoop path, books reference, and peculiarities
     const charactersToSeed = characters.map((character) => {
       // if Fiona, don't add #6
       if (character.name === "Fiona Frauenfeld") {
