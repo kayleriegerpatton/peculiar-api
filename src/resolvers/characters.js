@@ -2,8 +2,7 @@ const { ApolloError } = require("apollo-server");
 
 const { Character } = require("../models");
 
-// TODO: Figure out how to populate ymbryne Character reference
-const getCharacters = async (parent, args, context, info) => {
+const getCharacters = async () => {
   try {
     const characters = await Character.find({})
       .populate("peculiarity")

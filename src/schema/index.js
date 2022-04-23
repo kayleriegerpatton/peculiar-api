@@ -42,6 +42,7 @@ const typeDefs = gql`
   # QUERIES
   type Query {
     characters: [Character]
+    character(characterId: ID!): Character
     charactersByBook(bookId: ID!): [Character]
     charactersByPeculiarity(peculiarityId: ID!): [Character]
   }

@@ -2,10 +2,12 @@
 const characters = require("./characters.js");
 const charactersByBook = require("./charactersByBook");
 const charactersByPeculiarity = require("./charactersByPeculiarity");
+const character = require("./character");
 
 const resolvers = {
   Query: {
     characters,
+    character,
     charactersByBook,
     charactersByPeculiarity,
   },
