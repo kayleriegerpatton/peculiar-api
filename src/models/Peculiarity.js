@@ -11,6 +11,15 @@ const peculiaritySchema = {
       type: String,
     },
   ],
+
+  // TODO: path listing all characters with peculiarity
+  // knownPeculiars: [
+  //   {
+  //     //   reference Character model
+  //     type: Schema.Types.ObjectId,
+  //     ref: "Character",
+  //   },
+  // ],
 };
 
 const schema = new Schema(peculiaritySchema, {
