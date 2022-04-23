@@ -4,7 +4,9 @@ const { Character } = require("../models");
 
 const charactersByBook = async (_, { bookId }) => {
   try {
-    const characters = await Character.find({});
+    const characters = await Character.find({ books: [bookId] });
+
+    return characters;
   } catch (error) {
     console.log(
       `[ERROR]: Failed to get characters by book id | ${error.message}`
