@@ -7,6 +7,7 @@ const charactersByLoop = require("./character/charactersByLoop");
 
 const peculiarities = require("./peculiarity/peculiarities");
 const peculiarity = require("./peculiarity/peculiarity");
+const createPeculiarity = require("./peculiarity/createPeculiarity");
 
 const loops = require("./loop/loops");
 const loop = require("./loop/loop");
@@ -22,6 +23,9 @@ const resolvers = {
     peculiarity,
     loops,
     loop,
+  },
+  Mutation: {
+    createPeculiarity,
   },
 };
 

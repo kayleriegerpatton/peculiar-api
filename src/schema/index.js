@@ -38,6 +38,10 @@ const typeDefs = gql`
   }
 
   # INPUT TYPES
+  input PeculiarityInput {
+    name: String!
+    abilities: [String]
+  }
 
   # QUERIES
   type Query {
@@ -52,6 +56,11 @@ const typeDefs = gql`
 
     loops: [Loop]
     loop(loopId: ID!): Loop
+  }
+
+  # MUTATIONS
+  type Mutation {
+    createPeculiarity(input: PeculiarityInput!): Peculiarity!
   }
 `;
 
