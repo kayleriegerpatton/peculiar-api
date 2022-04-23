@@ -11,6 +11,7 @@ const createPeculiarity = require("./peculiarity/createPeculiarity");
 
 const loops = require("./loop/loops");
 const loop = require("./loop/loop");
+const createLoop = require("./loop/createLoop");
 
 const resolvers = {
   Query: {
@@ -26,6 +27,7 @@ const resolvers = {
   },
   Mutation: {
     createPeculiarity,
+    createLoop,
   },
 };
 

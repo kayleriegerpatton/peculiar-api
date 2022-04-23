@@ -6,12 +6,14 @@ const typeDefs = gql`
   type Loop {
     id: ID!
     city: String
+    state: String
     country: String!
-    day: Int
+    day: String
     month: String
     year: String
     description: String
     ymbryne: Character
+    active: Boolean!
   }
 
   type Book {
@@ -43,6 +45,18 @@ const typeDefs = gql`
     abilities: [String]
   }
 
+  input LoopInput {
+    city: String
+    state: String
+    country: String
+    day: String
+    month: String
+    year: String
+    description: String!
+    ymbryne: ID
+    active: Boolean!
+  }
+
   # QUERIES
   type Query {
     characters: [Character]
@@ -61,6 +75,7 @@ const typeDefs = gql`
   # MUTATIONS
   type Mutation {
     createPeculiarity(input: PeculiarityInput!): Peculiarity!
+    createLoop(input: LoopInput!): Loop!
   }
 `;
 

@@ -6,15 +6,18 @@ const loopSchema = {
     default: "Unknown",
   },
 
+  state: {
+    type: String,
+  },
+
   country: {
     type: String,
-    required: true,
     default: "Unknown",
   },
 
   day: {
     //   3
-    type: Number,
+    type: String,
     default: "Unknown",
   },
 
@@ -22,6 +25,7 @@ const loopSchema = {
     //   September
     type: String,
     enum: [
+      "Unknown",
       "January",
       "February",
       "March",
@@ -39,7 +43,7 @@ const loopSchema = {
   },
 
   year: {
-    //  500 B.C.E, 1940 C.E.
+    // ex. 500 B.C.E, 1940 C.E.
     type: String,
     default: "Unknown",
   },
@@ -52,6 +56,12 @@ const loopSchema = {
 
   description: {
     type: String,
+    required: true,
+  },
+
+  active: {
+    type: Boolean,
+    required: true,
   },
 };
 
