@@ -50,6 +50,7 @@ const typeDefs = gql`
     peculiarities: [Peculiarity]
 
     loops: [Loop]
+    loop(loopId: ID!): Loop
   }
 `;
 
