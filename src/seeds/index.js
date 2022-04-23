@@ -67,7 +67,7 @@ const seed = async () => {
           ...character,
           peculiarity: seededPeculiarities[9]._id,
           homeLoop: seededLoop[0]._id,
-          books: seededBooks.splice(5, 1),
+          books: seededBooks.filter((el, i) => i != 5),
         };
       }
 
