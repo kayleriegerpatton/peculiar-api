@@ -29,7 +29,7 @@ const characterSchema = {
       "https://www.ransomriggs.com/wp-content/uploads/2018/02/book_cover_img1.jpg",
   },
 
-  // TODO: handle when a character has lived in more than one loop
+  // TODO: update to array to handle when a character has lived in more than one loop
   homeLoop: {
     //   reference Loop model
     type: Schema.Types.ObjectId,

@@ -57,6 +57,15 @@ const typeDefs = gql`
     active: Boolean!
   }
 
+  input CharacterInput {
+    name: String!
+    species: [String]
+    peculiarity: ID
+    imageUrl: String
+    homeLoop: ID
+    books: [ID]
+  }
+
   # QUERIES
   type Query {
     characters: [Character]
@@ -75,7 +84,10 @@ const typeDefs = gql`
   # MUTATIONS
   type Mutation {
     createPeculiarity(input: PeculiarityInput!): Peculiarity!
+
     createLoop(input: LoopInput!): Loop!
+
+    createCharacter(input: CharacterInput!): Character!
   }
 `;
 
