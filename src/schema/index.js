@@ -45,6 +45,7 @@ const typeDefs = gql`
     character(characterId: ID!): Character
     charactersByBook(bookId: ID!): [Character]
     charactersByPeculiarity(peculiarityId: ID!): [Character]
+    charactersByLoop(loopId: ID!): [Character]
   }
 `;
 
