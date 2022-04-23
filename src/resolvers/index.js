@@ -5,6 +5,7 @@ const charactersByPeculiarity = require("./character/charactersByPeculiarity");
 const character = require("./character/character");
 const charactersByLoop = require("./character/charactersByLoop");
 const peculiarities = require("./peculiarity/peculiarities");
+const loops = require("./loop/loops");
 
 const resolvers = {
   Query: {
@@ -14,6 +15,7 @@ const resolvers = {
     charactersByPeculiarity,
     charactersByLoop,
     peculiarities,
+    loops,
   },
 };
 
