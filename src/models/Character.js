@@ -42,6 +42,12 @@ const characterSchema = {
       ref: "Book",
     },
   ],
+
+  status: {
+    type: String,
+    required: true,
+    enum: ["Alive", "Dead", "Unknown"],
+  },
 };
 
 const schema = new Schema(characterSchema, {

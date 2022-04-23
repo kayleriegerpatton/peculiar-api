@@ -5,6 +5,7 @@
     "day": 3,
     "month": "September",
     "year": "1940 C.E.",
-    "description": "Entrance through cairn tunnel"
+    "description": "Entrance through cairn tunnel",
+    "active": false
   }
 ]

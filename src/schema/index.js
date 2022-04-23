@@ -37,6 +37,7 @@ const typeDefs = gql`
     imageUrl: String
     homeLoop: Loop
     books: [Book]
+    status: String!
   }
 
   # INPUT TYPES
@@ -64,6 +65,7 @@ const typeDefs = gql`
     imageUrl: String
     homeLoop: ID
     books: [ID]
+    status: String!
   }
 
   # QUERIES
