@@ -37,9 +37,12 @@ const typeDefs = gql`
     books: [Book]
   }
 
+  # INPUT TYPES
+
   # QUERIES
   type Query {
     characters: [Character]
+    charactersByBook(bookId: ID!): [Character]
   }
 `;
 
