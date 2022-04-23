@@ -1,6 +1,6 @@
 const { ApolloError } = require("apollo-server");
 
-const { Character } = require("../models");
+const { Character } = require("../../models");
 
 const charactersByPeculiarity = async (_, { peculiarityId }) => {
   try {
