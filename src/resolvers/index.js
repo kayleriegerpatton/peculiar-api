@@ -4,7 +4,10 @@ const charactersByBook = require("./character/charactersByBook");
 const charactersByPeculiarity = require("./character/charactersByPeculiarity");
 const character = require("./character/character");
 const charactersByLoop = require("./character/charactersByLoop");
+
 const peculiarities = require("./peculiarity/peculiarities");
+const peculiarity = require("./peculiarity/peculiarity");
+
 const loops = require("./loop/loops");
 const loop = require("./loop/loop");
 
@@ -16,6 +19,7 @@ const resolvers = {
     charactersByPeculiarity,
     charactersByLoop,
     peculiarities,
+    peculiarity,
     loops,
     loop,
   },

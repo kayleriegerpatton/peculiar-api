@@ -48,6 +48,7 @@ const typeDefs = gql`
     charactersByLoop(loopId: ID!): [Character]
 
     peculiarities: [Peculiarity]
+    peculiarity(peculiarityId: ID!): Peculiarity
 
     loops: [Loop]
     loop(loopId: ID!): Loop
