@@ -75,6 +75,19 @@ const typeDefs = gql`
     abilities: [String]
   }
 
+  input LoopUpdateInput {
+    id: ID!
+    city: String
+    state: String
+    country: String
+    day: String
+    month: String
+    year: String
+    description: String
+    ymbryne: ID
+    active: Boolean
+  }
+
   ## QUERIES ##
   type Query {
     characters: [Character]
@@ -96,6 +109,7 @@ const typeDefs = gql`
     updatePeculiarity(input: PeculiarityUpdateInput!): Peculiarity!
 
     createLoop(input: LoopInput!): Loop!
+    updateLoop(input: LoopUpdateInput!): Loop!
 
     createCharacter(input: CharacterInput!): Character!
   }

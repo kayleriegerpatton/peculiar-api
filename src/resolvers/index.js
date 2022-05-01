@@ -17,6 +17,7 @@ const updatePeculiarity = require("./peculiarity/updatePeculiarity");
 const loops = require("./loop/loops");
 const loop = require("./loop/loop");
 const createLoop = require("./loop/createLoop");
+const updateLoop = require("./loop/updateLoop");
 
 const resolvers = {
   Query: {
@@ -35,6 +36,7 @@ const resolvers = {
     createPeculiarity,
     updatePeculiarity,
     createLoop,
+    updateLoop,
   },
 };
 
