@@ -1,7 +1,7 @@
 const { gql } = require("apollo-server");
 
 const typeDefs = gql`
-  # RECORD TYPES
+  ## RECORD TYPES ##
 
   type Loop {
     id: ID!
@@ -40,7 +40,8 @@ const typeDefs = gql`
     status: String!
   }
 
-  # INPUT TYPES
+  ## INPUT TYPES ##
+
   input PeculiarityInput {
     name: String!
     abilities: [String]
@@ -68,7 +69,13 @@ const typeDefs = gql`
     status: String!
   }
 
-  # QUERIES
+  input PeculiarityUpdateInput {
+    id: ID!
+    name: String
+    abilities: [String]
+  }
+
+  ## QUERIES ##
   type Query {
     characters: [Character]
     character(characterId: ID!): Character
@@ -86,6 +93,7 @@ const typeDefs = gql`
   # MUTATIONS
   type Mutation {
     createPeculiarity(input: PeculiarityInput!): Peculiarity!
+    updatePeculiarity(input: PeculiarityUpdateInput!): Peculiarity!
 
     createLoop(input: LoopInput!): Loop!
 
