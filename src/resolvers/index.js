@@ -6,6 +6,7 @@ const charactersByPeculiarity = require("./character/charactersByPeculiarity");
 const character = require("./character/character");
 const charactersByLoop = require("./character/charactersByLoop");
 const createCharacter = require("./character/createCharacter");
+const updateCharacter = require("./character/updateCharacter");
 
 // PECULIARITY RESOLVERS
 const peculiarities = require("./peculiarity/peculiarities");
@@ -33,6 +34,7 @@ const resolvers = {
   },
   Mutation: {
     createCharacter,
+    updateCharacter,
     createPeculiarity,
     updatePeculiarity,
     createLoop,

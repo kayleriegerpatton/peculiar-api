@@ -80,6 +80,11 @@ const typeDefs = gql`
     loopInfo: LoopInput!
   }
 
+  input CharacterUpdateInput {
+    characterId: ID!
+    characterInfo: CharacterInput!
+  }
+
   ## QUERIES ##
   type Query {
     characters: [Character]
@@ -104,6 +109,7 @@ const typeDefs = gql`
     updateLoop(input: LoopUpdateInput!): Loop!
 
     createCharacter(input: CharacterInput!): Character!
+    updateCharacter(input: CharacterUpdateInput!): Character!
   }
 `;
 
