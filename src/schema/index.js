@@ -76,16 +76,8 @@ const typeDefs = gql`
   }
 
   input LoopUpdateInput {
-    id: ID!
-    city: String
-    state: String
-    country: String
-    day: String
-    month: String
-    year: String
-    description: String
-    ymbryne: ID
-    active: Boolean
+    loopId: ID!
+    loopInfo: LoopInput!
   }
 
   ## QUERIES ##

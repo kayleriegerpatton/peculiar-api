@@ -4,14 +4,14 @@ const { Loop } = require("../../models");
 
 const updateLoop = async (_, { input }) => {
   try {
-    console.log(input);
+    const loopInfo = input.loopInfo;
 
     const updatedLoop = await Loop.findByIdAndUpdate(
-      input.id,
-      { $set: { name: input.name }, $push: { abilities: input.abilities } },
+      input.loopId,
+      { ...loopInfo },
       { new: true }
-    );
-    console.log(updatedLoop);
+    ).populate("ymbryne", "name");
+
     return updatedLoop;
   } catch (error) {
     console.log(`[ERROR]: Failed to update loop | ${error.message}`);
