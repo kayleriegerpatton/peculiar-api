@@ -1,3 +1,11 @@
+// TODO: add book 8 to data, refactor seeds
+// {
+//   "title": "Miss Peregrine's Museum of Wonders: An Indispensable Guide to the Dangers and Delights of the Peculiar World for the Instruction fo New Arrivals",
+//   "author": "Ransom Riggs",
+//   "releaseYear": 2022,
+//   "bookNumber": 8
+// }
+
 require("dotenv").config();
 const mongoose = require("mongoose");
 
