@@ -98,6 +98,8 @@ const typeDefs = gql`
 
     loops: [Loop]
     loop(loopId: ID!): Loop
+
+    books: [Book]
   }
 
   # MUTATIONS

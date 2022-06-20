@@ -20,6 +20,9 @@ const loop = require("./loop/loop");
 const createLoop = require("./loop/createLoop");
 const updateLoop = require("./loop/updateLoop");
 
+// BOOK RESOLVERS
+const books = require("./book/books");
+
 const resolvers = {
   Query: {
     characters,
@@ -31,6 +34,7 @@ const resolvers = {
     peculiarity,
     loops,
     loop,
+    books,
   },
   Mutation: {
     createCharacter,
