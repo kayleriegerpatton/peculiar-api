@@ -65,7 +65,16 @@ const loopSchema = {
   },
 };
 
-const schema = new Schema(loopSchema, { id: true });
+const schema = new Schema(loopSchema, {
+  id: true,
+  toJSON: { getters: true, virtuals: true },
+  toObject: { virtuals: true },
+});
+
+// virtual to add 'label' path for use by MUI autocomplete LOOPS component
+schema.virtual("label").get(function () {
+  return this?.city + ", " + this?.year;
+});
 
 const Loop = model("Loop", schema);
 

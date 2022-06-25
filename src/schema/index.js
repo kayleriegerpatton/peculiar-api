@@ -14,6 +14,7 @@ const typeDefs = gql`
     description: String
     ymbryne: Character
     active: Boolean!
+    label: String
   }
 
   type Book {
