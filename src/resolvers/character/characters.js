@@ -5,6 +5,7 @@ const { Character } = require("../../models");
 const getCharacters = async () => {
   try {
     const characters = await Character.find({})
+      .sort({ name: "asc" })
       .populate("peculiarity")
       .populate("books")
       .populate({ path: "homeLoop", populate: "ymbryne" });
