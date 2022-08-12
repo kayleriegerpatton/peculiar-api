@@ -71,7 +71,7 @@ const schema = new Schema(loopSchema, {
   toObject: { virtuals: true },
 });
 
-// virtual to add 'label' path for use by MUI autocomplete LOOPS component
+// virtual for use by MUI autocomplete LOOPS component
 schema.virtual("label").get(function () {
   return this?.city + ", " + this?.year;
 });
