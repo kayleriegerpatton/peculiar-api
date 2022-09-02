@@ -25,8 +25,9 @@ const characterSchema = {
 
   imageUrl: {
     type: String,
+    // image in aws s3 bucket
     default:
-      "https://www.ransomriggs.com/wp-content/uploads/2018/02/book_cover_img1.jpg",
+      "https://peculiar-project-images.s3.amazonaws.com/default-character.png",
   },
 
   // TODO: update to array to handle when a character has lived in more than one loop?
