@@ -1,17 +1,9 @@
-// TODO: add book 8 to data, refactor seeds
-// {
-//   "title": "Miss Peregrine's Museum of Wonders: An Indispensable Guide to the Dangers and Delights of the Peculiar World for the Instruction fo New Arrivals",
-//   "author": "Ransom Riggs",
-//   "releaseYear": 2022,
-//   "bookNumber": 8
-// }
-
 require("dotenv").config();
 const mongoose = require("mongoose");
 
 const { Character, Loop, Book, Peculiarity } = require("../models");
 
-// import data files
+// import seed files
 const books = require("./data/books.json");
 const loops = require("./data/loops.json");
 const characters = require("./data/characters.json");
@@ -19,6 +11,7 @@ const peculiarities = require("./data/peculiarities.json");
 
 const seed = async () => {
   try {
+    // connect to database instance
     await mongoose.connect(
       process.env.MONGODB_URI ||
         `mongodb://localhost:27017/${process.env.DB_NAME}`,
@@ -49,7 +42,7 @@ const seed = async () => {
     const seededBooks = await Book.find({});
     const seededPeculiarities = await Peculiarity.find({});
 
-    // lookup table = character name: peculiarity id
+    // lookup table = { character name: peculiarity id }
     const peculiarityByCharacter = {
       EmmaBloom: seededPeculiarities[0]._id,
       JacobPortman: seededPeculiarities[1]._id,
@@ -64,7 +57,7 @@ const seed = async () => {
     };
 
     const getCharacterPeculiarity = (character) =>
-      // remove non-alpha characters from names
+      // remove non-alpha characters from names in order to match the lookup keys^
       peculiarityByCharacter[character.replace(/[^a-z]/gi, "")];
 
     // iterate through characters, add loop id, books, and peculiarity refs
@@ -89,15 +82,14 @@ const seed = async () => {
         };
       }
 
-      // else add all 7 books
+      // else add books 1-7
+      // TODO: update based on which characters are in books 7 and 8
       return {
         ...character,
         // use lookup table to match peculiarity id to character name
         peculiarity: getCharacterPeculiarity(character.name),
         homeLoop: seededLoop[0]._id,
-        books: seededBooks.map((book) => {
-          return book._id;
-        }),
+        books: seededBooks.filter((el, i) => i != 7),
       };
     });
 
