@@ -103,7 +103,7 @@ const typeDefs = gql`
     books: [Book]
   }
 
-  # MUTATIONS
+  ## MUTATIONS ##
   type Mutation {
     createPeculiarity(input: PeculiarityInput!): Peculiarity!
     updatePeculiarity(input: PeculiarityUpdateInput!): Peculiarity!
