@@ -13,7 +13,7 @@ const typeDefs = gql`
     year: String
     description: String
     ymbryne: Character
-    active: Boolean!
+    status: String!
     label: String
   }
 
@@ -57,7 +57,7 @@ const typeDefs = gql`
     year: String
     description: String!
     ymbryne: ID
-    active: Boolean!
+    status: String!
   }
 
   input CharacterInput {

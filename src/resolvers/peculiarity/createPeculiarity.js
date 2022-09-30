@@ -3,6 +3,7 @@ const { ApolloError } = require("apollo-server");
 const { Peculiarity } = require("../../models");
 
 const createPeculiarity = async (_, { input }) => {
+  console.log('createPeculiarity input:', input);
   try {
     if (input) {
       const newPeculiarity = await Peculiarity.create({ ...input });

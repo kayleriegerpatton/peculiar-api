@@ -59,9 +59,14 @@ const loopSchema = {
     required: true,
   },
 
-  active: {
-    type: Boolean,
+  status: {
+    type: String,
     required: true,
+    enum: [
+      "Active",
+      "Collapsed",
+      "Unknown"
+    ]
   },
 };
 
