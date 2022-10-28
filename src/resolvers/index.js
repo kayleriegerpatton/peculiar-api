@@ -7,6 +7,7 @@ const character = require("./character/character");
 const charactersByLoop = require("./character/charactersByLoop");
 const createCharacter = require("./character/createCharacter");
 const updateCharacter = require("./character/updateCharacter");
+const ymbrynes = require("./character/ymbrynes")
 
 // PECULIARITY RESOLVERS
 const peculiarities = require("./peculiarity/peculiarities");
@@ -30,6 +31,7 @@ const resolvers = {
     charactersByBook,
     charactersByPeculiarity,
     charactersByLoop,
+    ymbrynes,
     peculiarities,
     peculiarity,
     loops,

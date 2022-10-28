@@ -93,6 +93,7 @@ const typeDefs = gql`
     charactersByBook(bookId: ID!): [Character]
     charactersByPeculiarity(peculiarityId: ID!): [Character]
     charactersByLoop(loopId: ID!): [Character]
+    ymbrynes: [Character]
 
     peculiarities: [Peculiarity]
     peculiarity(peculiarityId: ID!): Peculiarity
