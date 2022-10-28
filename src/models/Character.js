@@ -54,6 +54,13 @@ const characterSchema = {
 
 const schema = new Schema(characterSchema, {
   id: true,
+  toJSON: { getters: true, virtuals: true },
+  toObject: { virtuals: true },
+});
+
+// virtual for use by MUI autocomplete ymbrynes list
+schema.virtual("label").get(function () {
+  return this?.name;
 });
 
 const Character = model("Character", schema);

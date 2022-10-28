@@ -39,6 +39,7 @@ const typeDefs = gql`
     homeLoop: Loop
     books: [Book]
     status: String!
+    label: String
   }
 
   ## INPUT TYPES ##
