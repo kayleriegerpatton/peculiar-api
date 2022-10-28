@@ -19,7 +19,7 @@ const init = async () => {
       process.env.MONGODB_URI ||
       `mongodb://localhost:27017/${process.env.DB_NAME}`;
 
-    await mongoose.connect(connectionUrl, {
+    mongoose.connect(connectionUrl, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
