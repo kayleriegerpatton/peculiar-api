@@ -7,11 +7,11 @@ const typeDefs = gql`
     id: ID!
     city: String
     state: String
-    country: String!
+    country: String
     day: String
     month: String
     year: String
-    description: String
+    description: String!
     ymbryne: Character
     status: String!
     label: String
