@@ -43,7 +43,7 @@ const loopSchema = {
   },
 
   year: {
-    // ex. 500 B.C.E, 1940 C.E.
+    // ex. 500 B.C.E, 1940 C.E., 1700s
     type: String,
     default: "Unknown",
   },
