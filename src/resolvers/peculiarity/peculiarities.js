@@ -4,7 +4,8 @@ const { Peculiarity } = require("../../models");
 
 const getPeculiarities = async () => {
   try {
-    const peculiarities = await Peculiarity.find({});
+    const peculiarities = await Peculiarity.find({})
+    .sort({ name: "asc" })
 
     return peculiarities;
   } catch (error) {
