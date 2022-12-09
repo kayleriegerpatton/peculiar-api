@@ -12,7 +12,8 @@ const createCharacter = async (_, { input }) => {
 
     const character = await Character.findById(newCharacter._id)
       .populate("books")
-      .populate("peculiarity");
+      .populate("peculiarity")
+      .populate("homeLoop");
 
     return character;
     // } else {
