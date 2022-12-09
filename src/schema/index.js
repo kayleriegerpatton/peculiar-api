@@ -26,6 +26,7 @@ const typeDefs = gql`
   }
 
   type Peculiarity {
+    id: ID!
     name: String!
     abilities: [String]
   }
