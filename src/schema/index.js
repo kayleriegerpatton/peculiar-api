@@ -1,7 +1,7 @@
 const { gql } = require("apollo-server");
 
 const typeDefs = gql`
-  ## RECORD TYPES ##
+  ## RECORD TYPES ## -----------------------------
 
   type Loop {
     id: ID!
@@ -96,6 +96,14 @@ const typeDefs = gql`
     password: String!
   }
 
+  input UpdateUserInput {
+    firstName: String!
+    lastName: String!
+    username: String!
+    email: String!
+    profileImage: String!
+  }
+
   input CharacterInput {
     name: String!
     species: [String]
@@ -144,6 +152,7 @@ const typeDefs = gql`
   type Mutation {
     createUser(input: CreateUserInput!): CreateUserSuccess!
     loginUser(input: LoginInput!): UserAuth!
+    updateUser(input: UpdateUserInput!): User!
 
     createPeculiarity(input: PeculiarityInput!): Peculiarity!
     updatePeculiarity(input: PeculiarityUpdateInput!): Peculiarity!
