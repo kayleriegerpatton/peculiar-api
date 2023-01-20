@@ -2,15 +2,15 @@ require("dotenv").config();
 
 const { ApolloServer } = require("apollo-server");
 const mongoose = require("mongoose");
+const verifyToken  = require("./utils/verifyToken");
 
 const typeDefs = require("./schema");
 const resolvers = require("./resolvers");
-// const { authMiddleware } = require("./utils/auth");
 
 const server = new ApolloServer({
   typeDefs,
   resolvers,
-  //   context: authMiddleware,
+  context: verifyToken,
 });
 
 const init = async () => {

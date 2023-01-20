@@ -1,7 +1,7 @@
 const { gql } = require("apollo-server");
 
 const typeDefs = gql`
-  ## RECORD TYPES ##
+  ## RECORD TYPES ## -----------------------------
 
   type Loop {
     id: ID!
@@ -43,7 +43,28 @@ const typeDefs = gql`
     label: String
   }
 
-  ## INPUT TYPES ##
+  type User {
+    id: ID!
+    firstName: String!
+    lastName: String!
+    username: String!
+    email: String!
+    profileImage: String
+    savedCharacters: [Character]
+    createdCharacters: [Character]
+  }
+
+  type CreateUserSuccess {
+    success: Boolean!
+    user: User
+  }
+
+  type UserAuth {
+    token: ID!
+    user: User
+  }
+
+  ## INPUT TYPES ## -----------------------------
 
   input PeculiarityInput {
     name: String!
@@ -60,6 +81,28 @@ const typeDefs = gql`
     description: String!
     ymbryne: ID
     status: String!
+  }
+
+  input CreateUserInput {
+    firstName: String!
+    lastName: String!
+    username: String!
+    email: String!
+    password: String!
+    profileImage: String
+  }
+
+  input LoginInput {
+    email: String!
+    password: String!
+  }
+
+  input UpdateUserInput {
+    firstName: String!
+    lastName: String!
+    username: String!
+    email: String!
+    profileImage: String!
   }
 
   input CharacterInput {
@@ -88,7 +131,7 @@ const typeDefs = gql`
     characterInfo: CharacterInput!
   }
 
-  ## QUERIES ##
+  ## QUERIES ## -----------------------------
   type Query {
     characters: [Character]
     character(characterId: ID!): Character
@@ -108,6 +151,10 @@ const typeDefs = gql`
 
   ## MUTATIONS ##
   type Mutation {
+    signupUser(input: CreateUserInput!): CreateUserSuccess!
+    loginUser(input: LoginInput!): UserAuth!
+    updateUser(input: UpdateUserInput!): User!
+
     createPeculiarity(input: PeculiarityInput!): Peculiarity!
     updatePeculiarity(input: PeculiarityUpdateInput!): Peculiarity!
 
