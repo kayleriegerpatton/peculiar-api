@@ -40,7 +40,7 @@ const userSchema = {
 
   profileImage: {
     type: String,
-    default: "https://www.pngkey.com/png/full/115-1150152_default-profile-picture-avatar-png-green.png"
+    default: "https://www.pngkey.com/png/full/115-1150152_default-profile-picture-avatar-png-green.png" // do not pass any profileImage (rather than null) in the input in order for this to default 
   },
 
   savedCharacters: [{
@@ -63,17 +63,17 @@ const schema = new Schema(userSchema, {
 
 // before save, hash the password
 schema.pre("save", async function (next) {
-  if(this.isNew || this.isModified("password")){
+  if (this.isNew || this.isModified("password")) {
     this.password = await bcrypt.hash(this.password, 10)
   }
   next()
 })
 
 // schema method to check password at login
-schema.methods.checkPassword = async function(password){
+schema.methods.checkPassword = async function (password) {
   return bcrypt.compare(password, this.password)
 }
 
 const User = model("User", schema)
 
-module.exports = User
+module.exports = User;

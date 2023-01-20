@@ -88,6 +88,7 @@ const typeDefs = gql`
     lastName: String!
     username: String!
     email: String!
+    password: String!
     profileImage: String
   }
 
@@ -150,7 +151,7 @@ const typeDefs = gql`
 
   ## MUTATIONS ##
   type Mutation {
-    createUser(input: CreateUserInput!): CreateUserSuccess!
+    signupUser(input: CreateUserInput!): CreateUserSuccess!
     loginUser(input: LoginInput!): UserAuth!
     updateUser(input: UpdateUserInput!): User!
 

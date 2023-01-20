@@ -1,7 +1,8 @@
 const { ApolloError } = require('apollo-server');
-const { User } = require('../../models')
+const User = require("../../models/User")
 
 const signup = async (_, { input }) => {
+
   try {
     const user = await User.create(input)
     return { success: true, user }
