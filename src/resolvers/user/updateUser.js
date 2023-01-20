@@ -1,8 +1,8 @@
-const { AuthenticationError } = require('apollo-server')
-const { User } = require('../../models')
+const { ApolloError, AuthenticationError } = require('apollo-server')
+const User = require("../../models/User")
 
 // input is from the UI, user info is from the context
-const updateUser = async (_, { input }, { user }) => {
+const updateUser = async (_, { input }, {user}) => {
   try {
     // if no user logged in, throw error
     if (!user) {
