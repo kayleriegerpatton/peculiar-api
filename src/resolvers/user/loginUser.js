@@ -1,5 +1,5 @@
 const { AuthenticationError } = require('apollo-server');
-const { User } = require('../../models')
+const User = require("../../models/User")
 const signToken = require('../../utils/signToken')
 
 const loginUser = async (_, { input }, context) => {
