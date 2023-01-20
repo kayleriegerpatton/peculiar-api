@@ -1,4 +1,10 @@
 // import resolver functions
+
+// USER resolvers
+const signupUser = require('./user/signupUser')
+const loginUser = require('./user/loginUser')
+const updateUser = require('./user/updateUser')
+
 // CHARACTER RESOLVERS
 const characters = require("./character/characters");
 const charactersByBook = require("./character/charactersByBook");
@@ -39,6 +45,9 @@ const resolvers = {
     books,
   },
   Mutation: {
+    signupUser,
+    loginUser,
+    updateUser,
     createCharacter,
     updateCharacter,
     createPeculiarity,
