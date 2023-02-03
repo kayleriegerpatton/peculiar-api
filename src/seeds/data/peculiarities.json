@@ -1,6 +1,6 @@
 [
   {
-    "name": "Pyrokinesis",
+    "name": "Spark (pyrokinesis)",
     "abilities": ["Creates and controls fire"]
   },
   {
@@ -12,7 +12,7 @@
     ]
   },
   {
-    "name": "Deadraiser",
+    "name": "Dead-raiser",
     "abilities": ["Reanimates corpses"]
   },
   {
@@ -32,7 +32,7 @@
     "abilities": ["Has precognitive/prophetic dreams"]
   },
   {
-    "name": "Superstrength",
+    "name": "Berserker (superstrength)",
     "abilities": []
   },
   {

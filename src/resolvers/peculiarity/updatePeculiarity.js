@@ -5,7 +5,6 @@ const { Peculiarity } = require("../../models");
 const updatePeculiarity = async (_, { input }) => {
   // will reset name if provided
   // pushes additional abilities without validation for repeats
-  // TODO: handle deleting an ability within the Peculiarity record; either overwrite record here, or create separate resolver?
   try {
     const updatedPeculiarity = await Peculiarity.findByIdAndUpdate(
       input.id,

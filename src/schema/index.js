@@ -17,6 +17,14 @@ const typeDefs = gql`
     label: String
   }
 
+type Quote {
+  id: ID!
+  text: String!
+  book: Book!
+  chapter: Int!
+  character: Character!
+}
+
   type Book {
     id: ID!
     title: String!
@@ -40,6 +48,7 @@ const typeDefs = gql`
     homeLoop: Loop
     books: [Book]
     status: String!
+    quotes: [Quote]
     label: String
   }
 
@@ -105,6 +114,13 @@ const typeDefs = gql`
     profileImage: String!
   }
 
+  input QuoteInput {
+    text: String!
+    book: ID!
+    chapter: Int!
+    character: ID!
+  }
+
   input CharacterInput {
     name: String!
     species: [String]
@@ -113,6 +129,7 @@ const typeDefs = gql`
     homeLoop: ID
     books: [ID]
     status: String!
+    quotes: [ID]
   }
 
   input PeculiarityUpdateInput {
@@ -163,6 +180,8 @@ const typeDefs = gql`
 
     createCharacter(input: CharacterInput!): Character!
     updateCharacter(input: CharacterUpdateInput!): Character!
+
+    createQuote(input: QuoteInput!): Quote!
   }
 `;
 

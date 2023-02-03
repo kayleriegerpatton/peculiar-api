@@ -1,6 +1,5 @@
 const { Schema, model } = require("mongoose");
 
-// TODO: Future additions?: quotes, movie
 const characterSchema = {
   name: {
     type: String,
@@ -27,10 +26,9 @@ const characterSchema = {
     type: String,
     // image in aws s3 bucket
     default:
-      "https://peculiar-project-images.s3.amazonaws.com/default-character.png",
+      "https://peculiar-project-assets.s3.amazonaws.com/default-character.png",
   },
 
-  // TODO: update to array to handle when a character has lived in more than one loop?
   homeLoop: {
     //   reference Loop model
     type: Schema.Types.ObjectId,
@@ -50,6 +48,14 @@ const characterSchema = {
     required: true,
     enum: ["Alive", "Dead", "Unknown"],
   },
+
+  quotes: [
+    // reference Quote model
+    {
+    type: Schema.Types.ObjectId,
+    ref: "Quote"
+  }
+]
 };
 
 const schema = new Schema(characterSchema, {
