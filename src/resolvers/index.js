@@ -30,6 +30,9 @@ const updateLoop = require("./loop/updateLoop");
 // BOOK RESOLVERS
 const books = require("./book/books");
 
+// QUOTE RESOLVERS
+const createQuote = require("./quote/createQuote")
+
 const resolvers = {
   Query: {
     characters,
@@ -54,6 +57,7 @@ const resolvers = {
     updatePeculiarity,
     createLoop,
     updateLoop,
+    createQuote,
   },
 };
 

@@ -9,7 +9,7 @@ const updateUser = async (_, { input }, {user}) => {
       throw new AuthenticationError("You must be logged in to update your user profile")
     }
 
-    const updatedUser = await User.findByIdAndUpdate(user.id, { $set: { ...input } }, { returnDocument: "after" })
+    const updatedUser = await User.findByIdAndUpdate(user.id, { $set: { ...input } }, { returnDocument: "after" }) //should this be new:true?
 
     return updatedUser
   } catch (error) {

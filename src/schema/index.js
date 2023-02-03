@@ -116,9 +116,9 @@ type Quote {
 
   input QuoteInput {
     text: String!
-    book: Book!
+    book: ID!
     chapter: Int!
-    character: Character!
+    character: ID!
   }
 
   input CharacterInput {
@@ -129,7 +129,7 @@ type Quote {
     homeLoop: ID
     books: [ID]
     status: String!
-    quotes: [Quote]
+    quotes: [ID]
   }
 
   input PeculiarityUpdateInput {
