@@ -1,31 +1,32 @@
-const {Schema, model} = require("mongoose")
+const { Schema, model } = require("mongoose")
 
 const quoteSchema = {
-text: {
-  type: String,
-  required: true,
-  unique: true,
-},
+  text: {
+    type: String,
+    required: true,
+    unique: true,
+  },
 
-book: {
-  // reference Book model
-  type: Schema.Types.ObjectId,
-  ref: "Book",
-  required: true,
-},
+  book: {
+    // reference Book model
+    type: Schema.Types.ObjectId,
+    ref: "Book",
+    required: true,
+  },
 
-chapter: {
-  type: Number,
-  required: true,
-  min: 0,
-  max: 24
-},
+  chapter: {
+    type: Number,
+    required: true,
+    min: 0,
+    max: 24
+  },
 
-character: {
-  // reference Character model
-  type: Schema.Types.ObjectId,
-  ref: "Character"
-}
+  character: {
+    // reference Character model
+    type: Schema.Types.ObjectId,
+    ref: "Character",
+    required: true
+  }
 }
 
 const schema = new Schema(quoteSchema, {
