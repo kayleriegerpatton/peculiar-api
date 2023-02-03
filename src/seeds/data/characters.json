@@ -3,72 +3,84 @@
     "name": "Emma Bloom",
     "species": ["Peculiar"],
     "imageUrl": "https://static.wikia.nocookie.net/thepeculiarchildren/images/1/15/Emma_Bloom.png/revision/latest/scale-to-width-down/215?cb=20121130004645",
+    "quotes": [],
     "status": "Alive"
   },
   {
     "name": "Jacob Portman",
     "species": ["Peculiar"],
     "imageUrl": "https://static.wikia.nocookie.net/thepeculiarchildren/images/e/e7/Our_hero.png/revision/latest/scale-to-width-down/277?cb=20140216194807",
+    "quotes": [],
     "status": "Alive"
   },
   {
     "name": "Enoch O'Connor",
     "species": ["Peculiar"],
     "imageUrl": "https://static.wikia.nocookie.net/thepeculiarchildren/images/3/36/Enc.jpg/revision/latest/scale-to-width-down/246?cb=20130224032808",
+    "quotes": [],
     "status": "Alive"
   },
   {
     "name": "Alma LeFay Peregrine",
     "species": ["Peculiar"],
     "imageUrl": "https://static.wikia.nocookie.net/thepeculiarchildren/images/c/c2/AlmaPeregrine.jpg/revision/latest/scale-to-width-down/736?cb=20180115002142",
+    "quotes": [],
     "status": "Alive"
   },
   {
     "name": "Hugh Apiston",
     "species": ["Peculiar"],
     "imageUrl": "https://static.wikia.nocookie.net/thepeculiarchildren/images/b/b3/Hugh.jpg/revision/latest/scale-to-width-down/525?cb=20130224224153",
+    "quotes": [],
     "status": "Alive"
   },
   {
     "name": "Horace Somnusson",
     "species": ["Peculiar"],
     "imageUrl": "https://static.wikia.nocookie.net/thepeculiarchildren/images/5/56/Follower.jpg/revision/latest/scale-to-width-down/179?cb=20130222020233",
+    "quotes": [],
     "status": "Alive"
   },
   {
     "name": "Bronwyn Bruntley",
     "species": ["Peculiar"],
     "imageUrl": "https://static.wikia.nocookie.net/thepeculiarchildren/images/6/64/Bronwyn.jpg/revision/latest/scale-to-width-down/525?cb=20130222024955",
+    "quotes": [],
     "status": "Alive"
   },
   {
     "name": "Victor Bruntley",
     "species": ["Peculiar"],
     "imageUrl": "https://static.wikia.nocookie.net/thepeculiarchildren/images/1/1e/Strongboy.png/revision/latest/scale-to-width-down/233?cb=20130224010238",
+    "quotes": [],
     "status": "Dead"
   },
   {
     "name": "Olive Abroholos Elephanta",
     "species": ["Peculiar"],
     "imageUrl": "https://static.wikia.nocookie.net/thepeculiarchildren/images/1/17/The_Levitating_Girl_-_Yefim_Tovbis.png/revision/latest/scale-to-width-down/520?cb=20160420021010",
+    "quotes": [],
     "status": "Alive"
   },
   {
     "name": "Claire Densmore",
     "species": ["Peculiar"],
     "imageUrl": "https://static.wikia.nocookie.net/thepeculiarchildren/images/7/7d/Claire.jpg/revision/latest/scale-to-width-down/1000?cb=20210331002615",
+    "quotes": [],
     "status": "Alive"
   },
   {
     "name": "Fiona Frauenfeld",
     "species": ["Peculiar"],
     "imageUrl": "https://static.wikia.nocookie.net/thepeculiarchildren/images/2/22/Fiona.jpg/revision/latest/scale-to-width-down/525?cb=20130222030801",
+    "quotes": [],
     "status": "Alive"
   },
   {
     "name": "Millard Nullings",
     "species": ["Peculiar"],
     "imageUrl": "https://static.wikia.nocookie.net/thepeculiarchildren/images/e/e0/The_Invisible_Boy_-_Robert_Jackson.png/revision/latest/scale-to-width-down/520?cb=20160420020645",
+    "quotes": [],
     "status": "Alive"
   }
 ]
