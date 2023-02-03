@@ -10,8 +10,11 @@ const resolvers = require("./resolvers");
 const server = new ApolloServer({
   typeDefs,
   resolvers,
+  introspection: true,
   context: verifyToken,
 });
+
+mongoose.set('strictQuery', false)
 
 const init = async () => {
   try {
