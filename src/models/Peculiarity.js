@@ -4,6 +4,7 @@ const peculiaritySchema = {
   name: {
     type: String,
     required: true,
+    unique: true
   },
 
   abilities: [
