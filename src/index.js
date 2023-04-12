@@ -1,6 +1,4 @@
 require("dotenv").config();
-// TODO update to @apollo/server
-// const { ApolloServer } = require("apollo-server");
 const { ApolloServer } = require('@apollo/server');
 const { startStandaloneServer } = require('@apollo/server/standalone');
 const mongoose = require("mongoose");
@@ -8,13 +6,6 @@ const verifyToken = require("./utils/verifyToken");
 
 const typeDefs = require("./schema");
 const resolvers = require("./resolvers");
-
-// const server = new ApolloServer({
-//   typeDefs,
-//   resolvers,
-//   introspection: true,
-//   context: verifyToken,
-// });
 
 const server = new ApolloServer({ typeDefs, resolvers });
 
@@ -31,10 +22,6 @@ const init = async () => {
       useUnifiedTopology: true,
     });
 
-    // const { url } = await server.listen({
-    //   port: process.env.PORT || 4000,
-    // });
-    // console.log(`Server running on ${url}`);
     const {url} = await startStandaloneServer(server, {
       context: verifyToken,
       listen: {
